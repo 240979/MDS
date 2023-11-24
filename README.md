@@ -6,4 +6,7 @@ To do:
 4. automatizace zapnutí
 
 !Při stažení je třeba dokopírovat 
-nginx/conf/ssl
+`nginx/conf/ssl`
+
+
+Pro testování přehrávače spouštím `streams_LQ.bat`
