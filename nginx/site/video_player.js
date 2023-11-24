@@ -61,6 +61,21 @@ function init()
     videoWrapper.style.visibility = 'hidden';
 
 }
+//Refresh náhledového obrázku
+/*
+function refreshCameras() {
+    $('.imgWrapper img').attr('src', function(i, old) { return old.replace(/\?.+/,"?i=" + (Math.random()*1000)); });
+    setTimeout(refreshCameras, 1000);
+  }
+  function refreshCamerasFirst() {
+    $('.imgWrapper img').attr('src', function(i, old) { return old + "?i=" + (Math.random()*1000); });
+    setTimeout(refreshCameras, 1000);
+  }
+  $(function() {
+      setTimeout(refreshCamerasFirst, 1000);
+  });
+*/
+
 // <img src="/thumbnail/out.png" onclick="showModal()" onmouseover= "triggerPreview()" onmouseout="haltPreview()" class="img-fluid" id="thumbnail">
 
 /*
