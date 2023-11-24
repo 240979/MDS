@@ -9,4 +9,7 @@ To do:
 `nginx/conf/ssl`
 
 
-Pro testování přehrávače spouštím `streams_LQ.bat`
+Pro testování přehrávače spouštím `streams_LQ.bat`.
+Přehrávač je napsaný v `/sites/player_att.html`.
+V `index.html` je jenom automatický forward.
+
