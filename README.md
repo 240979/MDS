@@ -13,3 +13,4 @@ Pro testování přehrávače spouštím `streams_LQ.bat`.
 Přehrávač je napsaný v `/sites/player_att.html`.
 V `index.html` je jenom automatický forward.
 
+Do `sites/thumbnail` ukládat náhledové obrázky a do `sites/sound` zvukové stopy.
