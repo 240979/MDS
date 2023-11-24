@@ -32,3 +32,7 @@
 
 ## S/MIME message
 *.smime
+
+## ignore big videofiles
+*.m3u8
+*.ts
