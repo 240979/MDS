@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video</title>
+        <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>
+            Hello
+        </h1>
+        <a href="player_att.html">Player_att</a>
+        <video id="hlsPlayer" class="video-js" controls width="640" height="264" poster="preview.jpg">
+            <source src="/hls/stream.m3u8" type="application/x-mpegURL">
+            <p class="vjs-no-js">
+            Prohlížeč nepodporuje Javascript nebo HTML5.
+            </p>
+        </video>
+        <script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
+        <script src="video_player.js"></script>
+    </body>
+</html> 
