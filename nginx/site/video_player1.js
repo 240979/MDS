@@ -41,7 +41,7 @@ var imgWrapper = document.getElementById("imgWrapper");
 var videoWrapper = document.getElementById("videoWrapper");
 var previewPlayer = videojs('previewPlayer');
 previewPlayer.controls(false);
-
+previewPlayer.fluid(false);
 
 function playPreview()
 {
@@ -57,7 +57,12 @@ function stopPreview()
 }
 function init()
 {
-    //previewPlayer.setProperty('max-width','400px');
+    var previewDiv = document.getElementById('preview');
+    previewDiv.setAttribute('width','400px');
+    previewDiv.setAttribute('height','225px');
+    previewPlayer.setAttribute('width','400px');
+    videoWrapper.setAttribute('width','400px');
+    imgWrapper.setAttribute('width','400px');
     videoWrapper.style.position = "absolute";
     imgWrapper.style.postion = "relative";
     videoWrapper.style.visibility = 'hidden';
@@ -68,6 +73,7 @@ function init()
 
 //Refresh náhledového obrázku
 //Princip: Změna se vyvolá tím, že se změní nečtená část souboru (přidá se unixový čas)
+//https://itecnote.com/tecnote/javascript-refreshing-images-on-a-page-periodically/
 function refreshCameras() {
     $('#thumbnail').attr('src', function(i, old) { return old.replace(/\?.+/,"?i=" + (Date.now)); });
     setTimeout(refreshCameras, 1000);
