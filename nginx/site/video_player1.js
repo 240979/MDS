@@ -61,44 +61,42 @@ function init()
     videoWrapper.style.position = "absolute";
     imgWrapper.style.postion = "relative";
     videoWrapper.style.visibility = 'hidden';
-    refreshImages();
+    refreshCamerasFirst(); //Volání refreshe obrázku
 }
 
 
 
 //Refresh náhledového obrázku
-/*
+
 function refreshCameras() {
-    $('.imgWrapper img').attr('src', function(i, old) { return old.replace(/\?.+/,"?i=" + (Math.random()*1000)); });
+    $('#thumbnail').attr('src', function(i, old) { return old.replace(/\?.+/,"?i=" + (Math.random()*1000)); });
     setTimeout(refreshCameras, 1000);
   }
   function refreshCamerasFirst() {
-    $('.imgWrapper img').attr('src', function(i, old) { return old + "?i=" + (Math.random()*1000); });
+    $('#thumbnail').attr('src', function(i, old) { return old + "?i=" + (Math.random()*1000); });
     setTimeout(refreshCameras, 1000);
   }
-  $(function() {
-      setTimeout(refreshCamerasFirst, 1000);
-  });
-*/
+
 /*
+
 function refreshImages()
 {
     caches.open("v1").then((cache) => {
         cache.delete("/images/preview0.png").then((response) => {
-            document.getElementById("hello").src="hello.gif";
+            document.getElementById("thumbnail").src="preview0.png";
  
             setTimeout("refreshImages()",(1000))
         });
       });
-}
-*/
+}*/
+
 /*
 setTimeout(() => {
     //document.getElementById("thumbnail").src="/images/preview0a.png";
     document.getElementById("thumbnail").src="/images/preview0.png";
   }, 500);
   */
-
+/*
 function refreshImages()
 {
     
@@ -106,3 +104,12 @@ function refreshImages()
    // document.getElementById("thumbnail").src="/images/preview0a.png";
     setTimeout("refreshImages()",500);
 }
+*/
+/*
+function refreshDiv()
+{
+    $( "#imgWrapper" ).load(window.location.href + " #imgWrapper" );
+    console.log("Refreshed!");
+    setTimeout("refreshDiv()",1000);
+}
+*/
