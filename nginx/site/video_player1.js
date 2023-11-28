@@ -67,13 +67,13 @@ function init()
 
 
 //Refresh náhledového obrázku
-
+//Princip: Změna se vyvolá tím, že se změní nečtená část souboru (přidá se unixový čas)
 function refreshCameras() {
-    $('#thumbnail').attr('src', function(i, old) { return old.replace(/\?.+/,"?i=" + (Math.random()*1000)); });
+    $('#thumbnail').attr('src', function(i, old) { return old.replace(/\?.+/,"?i=" + (Date.now)); });
     setTimeout(refreshCameras, 1000);
   }
   function refreshCamerasFirst() {
-    $('#thumbnail').attr('src', function(i, old) { return old + "?i=" + (Math.random()*1000); });
+    $('#thumbnail').attr('src', function(i, old) { return old + "?i=" + (Date.now); });
     setTimeout(refreshCameras, 1000);
   }
 
