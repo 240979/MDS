@@ -1,0 +1,34 @@
+[
+    {
+        "id": 0,
+        "vid_auto": "/hls/stream0.m3u8",
+        "vid_480": "/hls/stream0_480.m3u8",
+        "vid_360": "/hls/stream0_360.m3u8",
+        "vid_240": "/hls/stream0_240.m3u8",
+        "audio_url": "vltava.mp3"
+    },
+    {
+        "id": 1,
+        "vid_auto": "/hls/stream1.m3u8",
+        "vid_480": "/hls/stream1_480.m3u8",
+        "vid_360": "/hls/stream1_360.m3u8",
+        "vid_240": "/hls/stream1_240.m3u8",
+        "audio_url": "vltava.mp3"
+    },
+    {
+        "id": 2,
+        "vid_auto": "/hls/stream2.m3u8",
+        "vid_480": "/hls/stream2_480.m3u8",
+        "vid_360": "/hls/stream2_360.m3u8",
+        "vid_240": "/hls/stream2_240.m3u8",
+        "audio_url": "vltava.mp3"
+    },
+    {
+        "id": 3,
+        "vid_auto": "/hls/stream3.m3u8",
+        "vid_480": "/hls/stream3_480.m3u8",
+        "vid_360": "/hls/stream3_360.m3u8",
+        "vid_240": "/hls/stream3_240.m3u8",
+        "audio_url": "vltava.mp3"
+    }
+]

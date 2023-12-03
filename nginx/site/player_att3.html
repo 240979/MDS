@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video</title>
+        <meta charset="UTF-8"> 
+        <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link href="https://unpkg.com/@silvermine/videojs-quality-selector/dist/css/quality-selector.css" rel="stylesheet">
+        <!--<link href="style.css" rel="stylesheet" />-->
+    </head>
+    <body onload="init()">
+        
+        <div class="container text-center" id="container">
+            <div class="row">
+                <div class = "col-sm-4">
+                    <div id="preview0" onmouseenter="playPreview0()" onmouseleave="stopPreview0()" onclick="showModal0()">
+                    
+                        <div id="videoWrapper0">
+                            <video id="previewPlayer0" class="video-js" controls poster="/thumbnail/preview0.png" data-setup='{ "muted": true }'>
+                                <source src="/hls/stream0.m3u8" type="application/x-mpegURL">
+                                
+                                <p class="vjs-no-js">
+                                Prohlížeč nepodporuje Javascript nebo HTML5.
+                                </p>
+                                
+                            </video>
+                            
+                        </div>
+                        <div id="imgWrapper0">
+                            <img src="/thumbnail/preview0.png" class="img-fluid" id="thumbnail0">
+                        </div>
+                        
+                        <div class="modal fade" id="modalVid0">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content" >
+                                    <div class="modal-header">
+                                        <!--<h1 class="modal-title fs-5">Video 1</h1>-->
+                                        <button type="button" class="btn-close" onclick="$('#modalVid0').modal('hide');  console.log('xlosed0');""></button>
+                                        <!--<button type="button" class="btn-close" data-bs-dismiss="modal" data-target="modalVid0"></button>-->
+                                        <!--<button type="button" class="btn-close" onclick="hide0()"></button>-->
+                                    </div>
+                                    <div class="modal-body">
+                                        <div>
+                                            <a href="/hls/stream.m3u8">Originální video</a>
+                                        </div>
+                                        <div>
+                                            <video id="hlsPlayer0" class="video-js vjs-default-skin" controls width="640" height="264" poster="/thumbnail/preview0.png">
+                                                <source src="/hls/stream0.m3u8" type="application/x-mpegURL" label="auto" selected="true" id="0vidauto">
+                                                <source src="/hls/stream0_480.m3u8" type="application/x-mpegURL" label="480" res="480" id="0vid480">
+                                                <source src="/hls/stream0_360.m3u8" type="application/x-mpegURL" label="360" res="360" id="0vid360">
+                                                <source src="/hls/stream0_240.m3u8" type="application/x-mpegURL" label="240" res="240" id="0vid240" >
+                                                <p class="vjs-no-js">
+                                                Prohlížeč nepodporuje Javascript nebo HTML5.
+                                                </p>
+                                            
+                                            </video>
+                                            
+                                        </div>
+                                        <div>
+                                            <audio id="track0" type="audio/mpeg" loop>
+                                                <source src="/sound/sound.mp3">
+                                            </audio>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" onclick="$('#modalVid0').modal('hide');  console.log('closed0');">Close</button>
+                                        <!--<button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-target="modalVid0">Close</button>-->
+                                        <!--<button type="button" class="btn btn-primary" onclick="hide0()" >Close</button>-->
+                                        <!--<button type="button" class="btn btn-primary" id="close0" >Close</button>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class = "col-sm-4">
+                   
+                    <div id="preview1" onmouseenter="playPreview1()" onmouseleave="stopPreview1()" onclick="showModal1()">
+                    
+                        <div id="videoWrapper1">
+                            <video id="previewPlayer1" class="video-js" controls poster="/thumbnail/preview0.png" data-setup='{ "muted": true }'>
+                                <source src="/hls/stream1.m3u8" type="application/x-mpegURL">
+                                
+                                <p class="vjs-no-js">
+                                Prohlížeč nepodporuje Javascript nebo HTML5.
+                                </p>
+                                
+                            </video>
+                            
+                        </div>
+                        <div id="imgWrapper1">
+                            <img src="/thumbnail/preview1.png" class="img-fluid" id="thumbnail1">
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="modal fade" id="modalVid1">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content" >
+                                <div class="modal-header">
+                                    <!--<h1 class="modal-title fs-5">Video 2</h1>-->
+                                    <button type="button" class="btn-close" onclick="$('#modalVid1').modal('hide');  console.log('xlosed1');"></button>
+                                    <!--<button type="button" class="btn-close" onclick="hide1()"></button>-->
+                                </div>
+                                <div class="modal-body">
+                                    <div>
+                                        <a href="/hls/stream.m3u8">Originální video</a>
+                                    </div>
+                                    <div>
+                                        <video id="hlsPlayer1" class="video-js vjs-default-skin" controls width="640" height="264" poster="/thumbnail/preview1.png">
+                                            <source src="/hls/stream1.m3u8" type="application/x-mpegURL" label="auto" selected="true" id="1vidauto">
+                                            <source src="/hls/stream1_480.m3u8" type="application/x-mpegURL" label="480" res="480" id="1vid480">
+                                            <source src="/hls/stream1_360.m3u8" type="application/x-mpegURL" label="360" res="360" id="1vid360">
+                                            <source src="/hls/stream1_240.m3u8" type="application/x-mpegURL" label="240" res="240" id="1vid240" >
+                                            <p class="vjs-no-js">
+                                            Prohlížeč nepodporuje Javascript nebo HTML5.
+                                            </p>
+                                        
+                                        </video>
+                                        
+                                    </div>
+                                    <div>
+                                        <audio id="track1" type="audio/mpeg" loop>
+                                            <source src="/sound/sound.mp3">
+                                        </audio>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" onclick="$('#modalVid1').modal('hide'); console.log('closed1');">Close</button>
+                                    <!--<button type="button" class="btn btn-primary" onclick="hide1()" >Close</button>-->
+                                    <!--<button type="button" class="btn btn-primary" id="close1" >Close</button>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class = "col-sm-4">
+                    <div id="preview2" onmouseenter="playPreview2()" onmouseleave="stopPreview2()" onclick="showModal2()">
+                    
+                        <div id="videoWrapper2">
+                            <video id="previewPlayer2" class="video-js" controls poster="/thumbnail/preview2.png" data-setup='{ "muted": true }'>
+                                <source src="/hls/stream2.m3u8" type="application/x-mpegURL">
+                                
+                                <p class="vjs-no-js">
+                                Prohlížeč nepodporuje Javascript nebo HTML5.
+                                </p>
+                                
+                            </video>
+                            
+                        </div>
+                        <div id="imgWrapper2">
+                            <img src="/thumbnail/preview2.png" class="img-fluid" id="thumbnail2">
+                        </div>
+                        
+                        <div class="modal fade" id="modalVid2">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content" >
+                                    <div class="modal-header">
+                                        <!--<h1 class="modal-title fs-5">Video 1</h1>-->
+                                        <button type="button" class="btn-close" onclick="$('#modalVid2').modal('hide');  console.log('xlosed2');"></button>
+                                        <!--<button type="button" class="btn-close" data-bs-dismiss="modal" data-target="modalVid2"></button>-->
+                                        <!--<button type="button" class="btn-close" onclick="hide2()"></button>-->
+                                    </div>
+                                    <div class="modal-body">
+                                        <div>
+                                            <a href="/hls/stream.m3u8">Originální video</a>
+                                        </div>
+                                        <div>
+                                            <video id="hlsPlayer2" class="video-js vjs-default-skin" controls width="640" height="264" poster="/thumbnail/preview2.png">
+                                                <source src="/hls/stream2.m3u8" type="application/x-mpegURL" label="auto" selected="true" id="2vidauto">
+                                                <source src="/hls/stream2_480.m3u8" type="application/x-mpegURL" label="480" res="480" id="2vid480">
+                                                <source src="/hls/stream2_360.m3u8" type="application/x-mpegURL" label="360" res="360" id="2vid360">
+                                                <source src="/hls/stream2_240.m3u8" type="application/x-mpegURL" label="240" res="240" id="2vid240" >
+                                                <p class="vjs-no-js">
+                                                Prohlížeč nepodporuje Javascript nebo HTML5.
+                                                </p>
+                                            
+                                            </video>
+                                            
+                                        </div>
+                                        <div>
+                                            <audio id="track2" type="audio/mpeg" loop>
+                                                <source src="/sound/sound.mp3">
+                                            </audio>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" onclick="$('#modalVid2').modal('hide');  console.log('closed2');">Close</button>
+                                        <!--<button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-target="modalVid0">Close</button>-->
+                                        <!--<button type="button" class="btn btn-primary" onclick="hide0()" >Close</button>-->
+                                        <!--<button type="button" class="btn btn-primary" id="close0" >Close</button>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class = "col-sm-4">
+                   
+                    <div id="preview3" onmouseenter="playPreview3()" onmouseleave="stopPreview3()" onclick="showModal3()">
+                    
+                        <div id="videoWrapper3">
+                            <video id="previewPlayer3" class="video-js" controls poster="/thumbnail/preview0.png" data-setup='{ "muted": true }'>
+                                <source src="/hls/stream3.m3u8" type="application/x-mpegURL">
+                                
+                                <p class="vjs-no-js">
+                                Prohlížeč nepodporuje Javascript nebo HTML5.
+                                </p>
+                                
+                            </video>
+                            
+                        </div>
+                        <div id="imgWrapper3">
+                            <img src="/thumbnail/preview3.png" class="img-fluid" id="thumbnail3">
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="modal fade" id="modalVid3">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content" >
+                                <div class="modal-header">
+                                    <!--<h1 class="modal-title fs-5">Video 2</h1>-->
+                                    <button type="button" class="btn-close" onclick="$('#modalVid3').modal('hide');  console.log('xlosed3');"></button>
+                                    <!--<button type="button" class="btn-close" onclick="hide1()"></button>-->
+                                </div>
+                                <div class="modal-body">
+                                    <div>
+                                        <a href="/hls/stream.m3u8">Originální video</a>
+                                    </div>
+                                    <div>
+                                        <video id="hlsPlayer3" class="video-js vjs-default-skin" controls width="640" height="264" poster="/thumbnail/preview3.png">
+                                            <source src="/hls/stream3.m3u8" type="application/x-mpegURL" label="auto" selected="true" id="3vidauto">
+                                            <source src="/hls/stream3_480.m3u8" type="application/x-mpegURL" label="480" res="480" id="3vid480">
+                                            <source src="/hls/stream3_360.m3u8" type="application/x-mpegURL" label="360" res="360" id="3vid360">
+                                            <source src="/hls/stream3_240.m3u8" type="application/x-mpegURL" label="240" res="240" id="3vid240" >
+                                            <p class="vjs-no-js">
+                                            Prohlížeč nepodporuje Javascript nebo HTML5.
+                                            </p>
+                                        
+                                        </video>
+                                        
+                                    </div>
+                                    <div>
+                                        <audio id="track3" type="audio/mpeg" loop>
+                                            <source src="/sound/sound.mp3">
+                                        </audio>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" onclick="$('#modalVid3').modal('hide'); console.log('closed3');">Close</button>
+                                    <!--<button type="button" class="btn btn-primary" onclick="hide3()" >Close</button>-->
+                                    <!--<button type="button" class="btn btn-primary" id="close3" >Close</button>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+            
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
+        <script src="https://unpkg.com/@silvermine/videojs-quality-selector/dist/js/silvermine-videojs-quality-selector.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="video_player3.js"></script>
+        
+        
+    
+    </body>
+</html> 

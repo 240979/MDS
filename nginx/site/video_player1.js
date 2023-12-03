@@ -41,7 +41,6 @@ var imgWrapper = document.getElementById("imgWrapper");
 var videoWrapper = document.getElementById("videoWrapper");
 var previewPlayer = videojs('previewPlayer');
 previewPlayer.controls(false);
-previewPlayer.fluid(false);
 
 function playPreview()
 {
@@ -61,6 +60,7 @@ function init()
     previewDiv.setAttribute('width','400px');
     previewDiv.setAttribute('height','225px');
     previewPlayer.setAttribute('width','400px');
+    previewPlayer.setAttribute('height','225px');
     videoWrapper.setAttribute('width','400px');
     imgWrapper.setAttribute('width','400px');
     videoWrapper.style.position = "absolute";
