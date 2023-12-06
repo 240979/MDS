@@ -1,5 +1,5 @@
 REM set video="./fireworks.mp4"
-set video="http://147.229.147.107/hls/cam2.m3u8"
+set video="http://80.242.35.37:8084/mjpg/video.mjpg"
 set target="rtmp://localhost/hls/stream_"
 
 ffmpeg -y -stream_loop -1 -i %video% ^
