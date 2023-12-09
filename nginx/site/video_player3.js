@@ -241,7 +241,7 @@ function init()
     previewDiv0.setAttribute('height','225px');
     previewPlayer0.setAttribute('width','400px');
     previewPlayer0.setAttribute('height','225px');
-    videoWrapper0.setAttribute('width','400px');
+    videoWrapper0.setAttribute('width','400px');6
     imgWrapper0.setAttribute('width','400px');
     videoWrapper0.style.position = "absolute";
     imgWrapper0.style.postion = "relative";
@@ -258,6 +258,26 @@ function init()
     videoWrapper1.style.position = "absolute";
     imgWrapper1.style.postion = "relative";
     videoWrapper1.style.visibility = 'hidden';
+
+    var previewDiv2 = document.getElementById('preview2');
+    
+    previewDiv2.setAttribute('width','400px');
+    previewDiv2.setAttribute('height','225px');
+    previewPlayer2.setAttribute('width','400px');
+    previewPlayer2.setAttribute('height','225px');
+    videoWrapper2.setAttribute('width','400px');
+    imgWrapper2.setAttribute('width','400px');
+    videoWrapper2.style.visibility = 'hidden';
+
+    var previewDiv3 = document.getElementById('preview3');
+    
+    previewDiv3.setAttribute('width','400px');
+    previewDiv3.setAttribute('height','225px');
+    previewPlayer3.setAttribute('width','400px');
+    previewPlayer3.setAttribute('height','225px');
+    videoWrapper3.setAttribute('width','400px');
+    imgWrapper3.setAttribute('width','400px');
+    videoWrapper3.style.visibility = 'hidden';
 
     refreshCamerasFirst(); //Volání refreshe obrázku
     fetch('./config.json')
